@@ -44,7 +44,7 @@ let users
 
 ## Don't Repeat Yourself - 繰り返しを避ける
 
-プログラミングの世界では、"Don't Repeat Yourself"という有名な言葉があります。これは、プログラムにおいて何度も同じようなコードが出現するのを防ぐことを指します。似た動きをするファンクションなどは抽象度を高めて、一つにまとめることでより複雑性の低いコードを書くことが出来ます。
+プログラミングの世界では、"Don't Repeat Yourself"という有名な言葉があります。省略してDRY原則ともいったりします。これは、プログラムにおいて何度も同じようなコードが出現するのを防ぐことを指します。似た動きをするファンクションなどは抽象度を高めて、一つにまとめることでより複雑性の低いコードを書くことが出来ます。
 
 例えば、レッスン9で作成した`PasswordValidator`というクラスですが、`_cannotEmpty`という空白文字かどうかをチェックするファンクションを定義しました。しかし、パスワード以外でも、メールアドレスや名前など様々なものでも空白文字チェックが必要になってくるでしょう。そこでBaseValidatorというクラスを作成して、その中に`_cannotEmpty`メソッドは含めるようにすると便利です。
 
@@ -135,22 +135,22 @@ $ eslint --init
 すると、様々な質問がされます。
 
 ```bash
-? How would you like to configure ESLint?
+$ How would you like to configure ESLint?
 ```
 
 "Use a popular style guide"を選びます。すると、AirBnB、Googleなどの規約から設定を選べるのでAirBnBを選んでください。
 
 ```bash
-? Which style guide do you want to follow? Airbnb (https://github.com/airbnb/javascript)
+$ Which style guide do you want to follow? Airbnb (https://github.com/airbnb/javascript)
 ```
 
 後は、Reactを利用しているかなど質問をいくつか聞かれるので次のように答えていきます。
 
 ```bash
-? Do you use React? No
-? What format do you want your config file to be in? JavaScript
+$ Do you use React? No
+$ What format do you want your config file to be in? JavaScript
 Checking peerDependencies of eslint-config-airbnb-base@latest
-? The style guide "airbnb" requires eslint@^4.19.1. You are currently using eslint@5.0.1.
+$ The style guide "airbnb" requires eslint@^4.19.1. You are currently using eslint@5.0.1.
   Do you want to downgrade? Yes
 Local ESLint installation not found.
 The config that you've selected requires the following dependencies:
